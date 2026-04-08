@@ -2,7 +2,7 @@
 
 # 🌐 XenForo Auto Translate
 
-**Automatically translate XenForo 2.x language files into any language — powered by DeepL API**
+**Automatically translate XenForo 2.x language files into any language — powered by [studyo.gg](https://studyo.gg)**
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
 [![DeepL](https://img.shields.io/badge/DeepL-API-0F2B46?logo=deepl&logoColor=white)](https://www.deepl.com/pro-api)
@@ -168,6 +168,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 <div align="center">
 
-Made with ❤️ using [DeepL API](https://www.deepl.com/pro-api)
+Made with ❤️ using [studyo.gg](https://studyo.gg)
 
 </div>
