@@ -197,17 +197,6 @@ def select_file(argv_file: str | None) -> Path:
             print(f"  {i}. {f.name:<50} ({size_kb:,} KB)")
         print(f"  {len(xml_files)+1}. Enter path manually")
         print()
-    else:
-        print(clr("33", "  No XML language files found in this folder.\n"))
-        print("  To get the file:")
-        print("  1. Log in to your XenForo Admin Panel")
-        print("  2. Go to:  Appearance > Languages")
-        print("  3. Click the download icon next to 'English (US)'")
-        print(f"  4. Save the file into this folder:")
-        print(f"     {clr('36', str(SCRIPT_DIR))}")
-        print("  5. Re-run this tool\n")
-        input("  Press Enter to exit...")
-        sys.exit(0)
 
         while True:
             try:
@@ -221,6 +210,17 @@ def select_file(argv_file: str | None) -> Path:
                 print(clr("31", f"  Invalid choice."))
             except (ValueError, KeyboardInterrupt):
                 break
+    else:
+        print(clr("33", "  No XML language files found in this folder.\n"))
+        print("  To get the file:")
+        print("  1. Log in to your XenForo Admin Panel")
+        print("  2. Go to:  Appearance > Languages")
+        print("  3. Click the download icon next to 'English (US)'")
+        print(f"  4. Save the file into this folder:")
+        print(f"     {clr('36', str(SCRIPT_DIR))}")
+        print("  5. Re-run this tool\n")
+        input("  Press Enter to exit...")
+        sys.exit(0)
 
     # Manual entry
     while True:
@@ -427,4 +427,11 @@ def main():
     input("  Press Enter to exit...")
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except Exception as e:
+        print(f"\n  ERROR: {e}")
+        import traceback
+        traceback.print_exc()
+        input("\n  Press Enter to exit...")
+        sys.exit(1)

@@ -22,3 +22,8 @@ if %errorlevel% neq 0 (
 )
 
 python "%~dp0xf_translate.py" %*
+if %errorlevel% neq 0 (
+    echo.
+    echo An error occurred. See message above.
+    pause
+)

@@ -132,12 +132,28 @@ python xf_translate.py --reset-key      # change your saved API key
 
 ---
 
+## 🔑 Resetting Your API Key
+
+If you need to switch to a different DeepL API key:
+
+**Windows** — double-click `api-reset.bat`
+
+**Terminal:**
+```bash
+python xf_translate.py --reset-key
+```
+
+This will delete your saved API key and prompt you to enter a new one on the next run.
+
+---
+
 ## 📁 File Structure
 
 ```
 XenForo Auto Translate/
 ├── xf_translate.py        # main script
 ├── run.bat                # Windows one-click launcher
+├── api-reset.bat          # reset saved API key
 ├── README.md              # documentation
 └── .gitignore
 
